@@ -1,3 +1,5 @@
+import { LocationGridService } from './modules/components/location-grid/location-grid.service';
+import { LocationGridComponent } from './modules/components/location-grid/location-grid.component';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -9,8 +11,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, LocationGridComponent
       ],
+      providers: [LocationGridService]
     }).compileComponents();
   }));
 
@@ -32,4 +35,5 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to color-rule-engine!');
   });
+
 });

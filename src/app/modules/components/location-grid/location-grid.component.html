@@ -1,0 +1,14 @@
+<section class="location-grid container">
+  <div class="row row-header">
+    <div class="col">Number #</div>
+    <div class="col" (click)='openColorModal("NAME")'>Name</div>
+    <div class="col" (click)='openColorModal("DESIGNATION")'>Designation</div>
+    <div class="col" (click)='openColorModal("COUNTRY")'>Country</div>
+  </div>
+  <div [ngStyle]='rowData.color ? {"background-color":rowData.color, "color": "white"} : {}' class="row" *ngFor="let rowData of gridData; let i = index">
+    <div class="col">{{i+1}}</div>
+    <div class="col">{{rowData.name}}</div>
+    <div class="col">{{rowData.designation}}</div>
+    <div class="col">{{rowData.country}}</div>
+  </div>  
+</section>

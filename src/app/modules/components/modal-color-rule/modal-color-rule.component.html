@@ -1,0 +1,28 @@
+<div role="document" class="modal-dialog modal-color-rule">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Color rule for {{inputData.identifier | titlecase}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form (ngSubmit)="closeModal()" #modalForm="ngForm">
+          <div class="form-group group-1 clearfix">
+            <label for="identifierValue">{{inputData.identifier | titlecase}}</label>
+            <select class="form-control" [(ngModel)]="model.operator" id="operator" name="operator" required>
+              <option *ngFor="let op of operators | keyvalue" [value]="op.value">{{op.value}}</option>
+            </select>
+            <input type="text" class="form-control" [(ngModel)]="model.identifierValue" id="identifierValue" name="identifierValue" required>
+          </div>
+
+          <div class="form-group clearfix">
+            <label for="color">Color</label>            
+            <input type="text" class="form-control" [(ngModel)]="model.color" id="color" name="color" required>
+          </div>
+          <button type="submit" class="form-control btn btn-outline-dark" [disabled]="!modalForm.valid">Submit</button>
+        </form>
+
+      </div>
+  </div>

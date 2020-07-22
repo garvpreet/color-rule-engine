@@ -1,0 +1,20 @@
+.location-grid.container{
+    margin: 40px auto;
+    .row{
+        line-height: 35px;
+        border: 1px solid;
+    }
+    .row-header {
+        >div{
+            font-weight: bold;
+            &:not(:first-child){
+                cursor: pointer;
+                text-decoration: underline;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+        
+    }
+}

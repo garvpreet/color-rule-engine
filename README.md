@@ -1,5 +1,11 @@
 # ColorRuleEngine
 
+Developed by Garvpreet Singh.
+
+Problem:
+Develop a screen with just one grid with bunch of rows and columns. Any type of data is ok. When screen is launched, it should fetch the data and display it.
+This grid should have one feature – color rule engine. When the screen is up and running in chrome, user should be able to choose a context menu item on the grid, called “color rules”. When this item is clicked it should bring up a dialog where user can specify two things: a SQL-like condition and a color. User should be able to save these two attributes’ values to browser’s storage (lookup: localstorage). So for example, if your grid contains a column called “Country” and I use the color rules screen to specify a condition like “Country = ‘Canada’” and color as red, any row that has value of Country as red, should paint the row red colored.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
